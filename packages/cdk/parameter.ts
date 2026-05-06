@@ -11,7 +11,13 @@ const getContext = (app: cdk.App): StackInput => {
 };
 
 // デプロイ先環境ごとのパラメータを定義する
+import { selfHostingDevParams } from "./env-parameters/self-hosting-dev";
+
 const deploy_envs: Record<string, Partial<StackInput>> = {
+  "-selfHostingDev": selfHostingDevParams,
+  // 他の環境も追加可能
+//};
+//const deploy_envs: Record<string, Partial<StackInput>> = {
   // 開発環境のサンプルパラメータ
   // '-dev': {
   //   appEnv: 'dev',

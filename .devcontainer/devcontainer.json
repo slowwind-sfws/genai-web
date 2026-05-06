@@ -1,0 +1,13 @@
+{
+  "name": "genai-web",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "workspaceFolder": "/workspaces/genai-web",
+  "features": {
+    "ghcr.io/devcontainers/features/node:2": {
+      "version": "22.22.2"
+    },
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "bash ${containerWorkspaceFolder}/.devcontainer/install-claude-code.sh"
+}
